@@ -1,0 +1,31 @@
+name: Incident
+description: Something is down or broken in production
+type: Incident
+projects: ["tribhushan/1"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["S1 – service down", "S2 – degraded, many affected", "S3 – partial / few affected", "S4 – minor"]
+    validations: { required: true }
+  - type: input
+    id: start
+    attributes:
+      label: Started at (IST)
+      placeholder: "2026-11-19 18:05"
+    validations: { required: true }
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact – what and who is affected
+    validations: { required: true }
+  - type: textarea
+    id: actions
+    attributes:
+      label: Timeline and actions taken
+      placeholder: "18:05 alert received\n18:10 …"
+  - type: textarea
+    id: followup
+    attributes:
+      label: Root cause and follow-up (fill after resolution; link postmortem)

@@ -1,0 +1,46 @@
+name: Change request
+description: A change to a system, plan or policy – needs approval before work
+type: Change
+projects: ["tribhushan/1"]
+body:
+  - type: dropdown
+    id: class
+    attributes:
+      label: Change class
+      options: ["Standard – pre-approved routine", "Normal – needs approval first", "Emergency – fix now, approve right after"]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What will change
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+    validations: { required: true }
+  - type: textarea
+    id: affected
+    attributes:
+      label: Systems, environments and documents affected
+    validations: { required: true }
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk
+      options: [Low, Medium, High]
+    validations: { required: true }
+  - type: textarea
+    id: test
+    attributes:
+      label: How it will be tested / verified
+    validations: { required: true }
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback plan
+    validations: { required: true }
+  - type: input
+    id: window
+    attributes:
+      label: Planned window (IST)
