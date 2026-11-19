@@ -1,0 +1,14 @@
+name: Idea
+description: Something to consider later
+type: Idea
+projects: ["tribhushan/1"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations: { required: true }
+  - type: textarea
+    id: value
+    attributes:
+      label: Problem it solves / value

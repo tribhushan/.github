@@ -1,0 +1,36 @@
+name: Risk
+description: Risk register entry
+type: Risk
+projects: ["tribhushan/1"]
+body:
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk – what could happen, and its cause
+    validations: { required: true }
+  - type: dropdown
+    id: likelihood
+    attributes:
+      label: Likelihood
+      options: ["1 – rare", "2 – unlikely", "3 – possible", "4 – likely", "5 – almost certain"]
+    validations: { required: true }
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options: ["1 – negligible", "2 – minor", "3 – moderate", "4 – major", "5 – severe"]
+    validations: { required: true }
+  - type: dropdown
+    id: treatment
+    attributes:
+      label: Treatment
+      options: [Mitigate, Accept, Transfer, Avoid]
+    validations: { required: true }
+  - type: textarea
+    id: plan
+    attributes:
+      label: Controls / mitigation plan
+  - type: input
+    id: review
+    attributes:
+      label: Next review date
